@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melhores Planners para TDAH Adulto | TDAH em Ordem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1F2E27;
+    --forest: #2B4339;
+    --forest-light: #3D5245;
+    --cream: #FAF6EE;
+    --sand: #F3ECDD;
+    --yellow: #F2C14E;
+    --coral: #E8735C;
+    --coral-light: #F3A491;
+    --line: rgba(31,46,39,0.12);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Inter', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  h1,h2,h3 { font-family:'Baloo 2', sans-serif; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 28px; }
+  a { text-decoration:none; color:inherit; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    padding:22px 0;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--line);
+  }
+  .logo { font-family:'Baloo 2', sans-serif; font-weight:700; font-size:22px; color:var(--forest); }
+  .logo span { color:var(--coral); }
+  .nav-cta {
+    background:var(--forest); color:var(--yellow); font-weight:700; font-size:15px;
+    padding:11px 22px; border-radius:999px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { padding:64px 0 48px; text-align:center; }
+  .eyebrow {
+    display:inline-block; background:var(--yellow); color:var(--ink);
+    font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:8px 18px; border-radius:999px; margin-bottom:24px;
+  }
+  .hero h1 {
+    font-size:44px; font-weight:800; line-height:1.15; color:var(--forest);
+    max-width:720px; margin:0 auto 20px;
+  }
+  .hero h1 .accent { color:var(--coral); }
+  .hero p {
+    font-size:19px; color:var(--forest-light); max-width:560px; margin:0 auto 32px;
+  }
+  .trust-row {
+    display:flex; gap:28px; justify-content:center; flex-wrap:wrap; margin-top:8px;
+  }
+  .trust-item { font-size:14px; font-weight:600; color:var(--forest-light); display:flex; align-items:center; gap:8px; }
+  .trust-item::before { content:"✓"; color:var(--coral); font-weight:800; }
+
+  /* ---------- EMPATHY BLOCK ---------- */
+  .empathy {
+    background:var(--forest); color:var(--cream); padding:52px 0; margin:56px 0;
+  }
+  .empathy .wrap { text-align:center; }
+  .empathy h2 { font-size:30px; font-weight:700; margin-bottom:16px; color:var(--yellow); }
+  .empathy p { font-size:17px; color:#D9E3DC; max-width:600px; margin:0 auto; }
+
+  /* ---------- PRODUCT SECTION ---------- */
+  .section-title { text-align:center; margin-bottom:44px; }
+  .section-title h2 { font-size:32px; font-weight:700; color:var(--forest); }
+  .section-title p { font-size:16px; color:var(--forest-light); margin-top:10px; }
+
+  .products { display:flex; flex-direction:column; gap:22px; margin-bottom:64px; }
+
+  .product-card {
+    display:flex; gap:24px; background:#fff; border:1px solid var(--line); border-radius:22px;
+    padding:26px; align-items:center; position:relative; transition:transform .15s ease;
+  }
+  .product-card.top { border:2px solid var(--yellow); box-shadow:0 8px 0 rgba(242,193,78,0.25); }
+  .rank-badge {
+    position:absolute; top:-14px; left:26px; background:var(--coral); color:#fff;
+    font-family:'Baloo 2',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.03em;
+    padding:6px 16px; border-radius:999px; text-transform:uppercase;
+  }
+  .product-img {
+    width:120px; height:120px; border-radius:16px; background:var(--sand);
+    flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    font-size:44px;
+  }
+  .product-info { flex:1; }
+  .product-info h3 { font-size:22px; font-weight:700; color:var(--forest); margin-bottom:6px; }
+  .product-info .tag { display:inline-block; font-size:12px; font-weight:700; color:var(--coral); background:#FBE7E1; padding:4px 10px; border-radius:999px; margin-bottom:8px; }
+  .product-info p { font-size:15px; color:var(--forest-light); margin-bottom:14px; }
+  .product-meta { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .stars { color:var(--yellow); font-size:15px; letter-spacing:2px; }
+  .stars-num { font-size:13px; color:var(--forest-light); font-weight:600; }
+  .buy-btn {
+    background:var(--forest); color:var(--yellow); font-weight:700; font-size:15px;
+    padding:12px 24px; border-radius:999px; white-space:nowrap; display:inline-block;
+  }
+  .buy-col { display:flex; flex-direction:column; align-items:flex-end; gap:10px; flex-shrink:0; }
+
+  @media (max-width: 640px) {
+    .product-card { flex-direction:column; align-items:flex-start; }
+    .buy-col { align-items:flex-start; width:100%; }
+    .buy-btn { width:100%; text-align:center; }
+  }
+
+  /* ---------- COMPARISON TABLE ---------- */
+  .compare { margin-bottom:64px; }
+  .compare table { width:100%; border-collapse:collapse; background:#fff; border-radius:18px; overflow:hidden; border:1px solid var(--line); }
+  .compare th, .compare td { padding:16px 18px; text-align:left; font-size:14px; border-bottom:1px solid var(--line); }
+  .compare th { background:var(--sand); font-weight:700; color:var(--forest); font-family:'Baloo 2', sans-serif; }
+  .compare td { color:var(--forest-light); }
+  .compare tr:last-child td { border-bottom:none; }
+  .check { color:var(--coral); font-weight:800; }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:64px; }
+  .t-card { background:var(--sand); border-radius:20px; padding:26px; }
+  .t-card .stars { display:block; margin-bottom:12px; }
+  .t-card p { font-size:15px; color:var(--forest); margin-bottom:14px; font-style:italic; }
+  .t-name { font-size:14px; font-weight:700; color:var(--forest-light); }
+  @media (max-width:640px) { .testimonials { grid-template-columns:1fr; } }
+
+  /* ---------- FAQ ---------- */
+  .faq { margin-bottom:64px; }
+  .faq-item { border-bottom:1px solid var(--line); padding:20px 0; }
+  .faq-item h3 { font-size:17px; font-weight:600; color:var(--forest); margin-bottom:8px; }
+  .faq-item p { font-size:15px; color:var(--forest-light); }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta { background:linear-gradient(135deg, var(--coral), #F0987F); border-radius:28px; padding:52px 36px; text-align:center; margin-bottom:60px; }
+  .final-cta h2 { font-size:30px; font-weight:800; color:#fff; margin-bottom:14px; }
+  .final-cta p { font-size:16px; color:#FDEDE8; margin-bottom:26px; max-width:480px; margin-left:auto; margin-right:auto; }
+  .final-cta a.buy-btn { background:var(--forest); color:var(--yellow); font-size:17px; padding:16px 36px; }
+
+  /* ---------- FOOTER ---------- */
+  footer { border-top:1px solid var(--line); padding:32px 0 50px; text-align:center; }
+  footer p { font-size:13px; color:var(--forest-light); max-width:600px; margin:0 auto 8px; }
+  footer .brand { font-family:'Baloo 2', sans-serif; font-weight:700; color:var(--forest); margin-bottom:10px; }
+</style>
+</head>
+<body>
+
+<nav class="nav wrap">
+  <div class="logo">TDAH em <span>Ordem</span></div>
+  <a href="#produtos" class="nav-cta">Ver recomendações</a>
+</nav>
+
+<header class="hero wrap">
+  <span class="eyebrow">Guia testado • Atualizado 2026</span>
+  <h1>Os planners que <span class="accent">realmente</span> funcionam pra quem tem TDAH</h1>
+  <p>Comparamos, testamos e organizamos as melhores opções — sem enrolação, direto pro que importa: te ajudar a lembrar das coisas.</p>
+  <div class="trust-row">
+    <span class="trust-item">Testado por adultos com TDAH</span>
+    <span class="trust-item">Sem enrolação</span>
+    <span class="trust-item">Atualizado mensalmente</span>
+  </div>
+</header>
+
+<section class="empathy">
+  <div class="wrap">
+    <h2>Você já tentou de tudo?</h2>
+    <p>Agenda bonita que você para de usar em duas semanas. App que você esquece de abrir. A questão nunca foi falta de esforço — é que a maioria das ferramentas não foi pensada pra como o cérebro com TDAH realmente funciona. Por isso testamos e listamos só o que faz diferença de verdade.</p>
+  </div>
+</section>
+
+<main class="wrap" id="produtos">
+  <div class="section-title">
+    <h2>Nossas recomendações</h2>
+    <p>Ordenadas pelo que mais ajuda na rotina do dia a dia</p>
+  </div>
+
+  <div class="products">
+    <div class="product-card top">
+      <span class="rank-badge">Nº 1 mais recomendado</span>
+      <div class="product-img">📓</div>
+      <div class="product-info">
+        <span class="tag">Melhor custo-benefício</span>
+        <h3>Planner de Blocos de Tempo Visual</h3>
+        <p>Divide o dia em blocos coloridos em vez de horários rígidos — reduz a ansiedade de "atrasar" e facilita ver o dia inteiro de uma vez.</p>
+        <div class="product-meta">
+          <span class="stars">★★★★★</span>
+          <span class="stars-num">4.8 de 5 · +1.200 avaliações</span>
+        </div>
+      </div>
+      <div class="buy-col">
+        <a href="#" class="buy-btn">Ver preço →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🗂️</div>
+      <div class="product-info">
+        <span class="tag">Mais versátil</span>
+        <h3>Agenda com Espaço para Brain Dump</h3>
+        <p>Página extra todo dia só pra "descarregar" pensamentos soltos antes de organizar tarefas — evita esquecer ideias no meio do caos.</p>
+        <div class="product-meta">
+          <span class="stars">★★★★★</span>
+          <span class="stars-num">4.7 de 5 · +860 avaliações</span>
+        </div>
+      </div>
+      <div class="buy-col">
+        <a href="#" class="buy-btn">Ver preço →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">✅</div>
+      <div class="product-info">
+        <span class="tag">Mais simples</span>
+        <h3>Planner Semanal com Checklist Grande</h3>
+        <p>Caixas de checklist grandes o bastante pra marcar sem frustração — feito pra quem precisa de satisfação visual imediata.</p>
+        <div class="product-meta">
+          <span class="stars">★★★★☆</span>
+          <span class="stars-num">4.5 de 5 · +540 avaliações</span>
+        </div>
+      </div>
+      <div class="buy-col">
+        <a href="#" class="buy-btn">Ver preço →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="section-title">
+      <h2>Comparação rápida</h2>
+    </div>
+    <table>
+      <tr><th>Recurso</th><th>Blocos de Tempo</th><th>Brain Dump</th><th>Checklist</th></tr>
+      <tr><td>Ideal para rotina diária</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Espaço pra pensamentos soltos</td><td>—</td><td class="check">✓</td><td>—</td></tr>
+      <tr><td>Bom pra quem trabalha de casa</td><td class="check">✓</td><td class="check">✓</td><td>—</td></tr>
+      <tr><td>Fácil de carregar na bolsa</td><td>—</td><td>—</td><td class="check">✓</td></tr>
+      <tr><td>Preço</td><td>$$</td><td>$$$</td><td>$</td></tr>
+    </table>
+  </div>
+
+  <div class="section-title">
+    <h2>O que dizem quem já testou</h2>
+  </div>
+  <div class="testimonials">
+    <div class="t-card">
+      <span class="stars">★★★★★</span>
+      <p>"Primeira vez que uso um planner por mais de um mês sem desistir. O sistema de blocos faz total sentido pra minha cabeça."</p>
+      <span class="t-name">— Camila R.</span>
+    </div>
+    <div class="t-card">
+      <span class="stars">★★★★★</span>
+      <p>"O espaço de brain dump mudou como eu organizo o dia. Paro de esquecer coisas no meio do caminho."</p>
+      <span class="t-name">— Rafael M.</span>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <h2>Perguntas frequentes</h2>
+  </div>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>Esses produtos realmente ajudam ou é só marketing?</h3>
+      <p>Selecionamos com base em avaliações reais e em recursos específicos pra TDAH (visual, tátil, com pouca fricção) — não é sobre "força de vontade", é sobre ferramentas que reduzem o esforço mental necessário.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Preciso usar todos ao mesmo tempo?</h3>
+      <p>Não. Comece com um só. A maioria das pessoas com TDAH se sai melhor testando uma ferramenta de cada vez em vez de montar um sistema complexo logo de cara.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Funciona pra TDAH desatento ou só hiperativo?</h3>
+      <p>As recomendações aqui focam em organização visual e redução de carga mental, o que ajuda em ambos os perfis.</p>
+    </div>
+  </div>
+
+  <div class="final-cta">
+    <h2>Pronto pra parar de esquecer as coisas?</h2>
+    <p>Comece pelo Nº 1 da nossa lista — é o que mais gente relatou continuar usando depois de 3 meses.</p>
+    <a href="#produtos" class="buy-btn">Ver o planner recomendado →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">TDAH em Ordem</div>
+    <p>Este site pode conter links de afiliado. Ao comprar através deles, podemos receber uma pequena comissão, sem custo extra pra você. Isso ajuda a manter o conteúdo gratuito.</p>
+    <p>© 2026 TDAH em Ordem — feito com carinho por quem entende a rotina.</p>
+  </div>
+</footer>
+
+</body>
+</html>
